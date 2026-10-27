@@ -1,0 +1,16 @@
+name: Build
+
+on:
+  push:
+
+jobs:
+  python-check:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - name: Run Script
+        run: python3 python/health_check.py
